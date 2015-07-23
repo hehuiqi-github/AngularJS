@@ -39,17 +39,9 @@
 
     <hr/>
 
-    <div ng-controller="customersController">
-        {{peoples1}}
+    <div ng-controller="httpController">
+        {{peoples}}
     </div>
-
-    <script>
-        function customersController($scope,$http) {
-            $http.get("http://www.baiduc.com")
-                    .success(function(response) {$scope.peoples1 = response;});
-        }
-    </script>
-
 
 </body>
 

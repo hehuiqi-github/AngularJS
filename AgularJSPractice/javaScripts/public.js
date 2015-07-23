@@ -28,10 +28,16 @@ function namesContrroller($scope){
 }
 function httpController($scope,$http)
 {
-    $http.get("http://www.runoob.com/try/angularjs/data/Customers_JSON.php")
+    $http.get("../javaScripts/person.json")
         .success(function(response)
         {
             $scope.peoples = response;
-        });
+        })
+        .error(function(error){
+
+        }
+
+    )
+    ;
 
 }
