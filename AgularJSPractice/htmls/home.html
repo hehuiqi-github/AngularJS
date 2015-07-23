@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+
+    <script type="text/javascript" src="../vendor/angular/angularjs.js"></script>
+    <!--对 angular.module 的调用只能在库加载完成后才能进行 -->
+    <script type="text/javascript" src="../javaScripts/publicModel.js"></script>
+
+</head>
+<body ng-app="MyApp">
+    <div   ng-controller="homePage">
+        <p>
+            {{"首页标题："+title}}
+            <br/>
+            {{"内容："+content}}
+        </p>
+    </div>
+
+    <div ng-controller="detailController">
+        {{"商品详情："+goodsName+"  价格"+price}}
+    </div>
+
+    <div>
+        <span draggable>Drag ME</span>
+    </div>
+
+<hr/>
+
+    <div ng-controller="AddSubtract">
+
+        <button ng-click="plus(1)">添加</button>
+        <button ng-click="subtract(1)">减少</button>
+        <h>当前值：{{counter}}</h>
+
+    </div>
+
+    <hr/>
+
+    <div ng-controller="strInsert">
+
+       <input ng-model="to" type="email" placeholder="Recipient"/>
+        <textarea ng-model="emailBody" ></textarea>
+        <pre>{{ previewText }}</pre>
+    </div>
+
+
+
+
+</body>
+</html>

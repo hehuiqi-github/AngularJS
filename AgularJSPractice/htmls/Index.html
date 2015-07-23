@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FirstApp</title>
+    <script type="text/javascript" src="../vendor/angular/angularjs.js"> </script>
+    <script type="text/javascript" src="../javaScripts/public.js"></script>
+</head>
+<body ng-app>
+    <div ng-controller="firstController">
+        <input type="text" ng-model="name" value="" placeholder="姓名"/>
+        {{name}}
+    </div>
+    <hr>
+
+    <div ng-init="quantity=1;price=5">
+        数量:<input type="number" ng-model="quantity"/>
+        价格:<input type="number" ng-model="price"/>
+        <p>
+           <b>总价: </b>  {{quantity*price}}
+        </p>
+    </div>
+
+    <div ng-init="names=['a1','a2','a3']">
+        <ul>
+            <li ng-repeat="x in names">
+                {{x}}
+            </li>
+        </ul>
+    </div>
+    <hr/>
+    <div ng-controller="namesContrroller">
+        <ul>
+            <li ng-repeat="person in names">
+                {{person.name  +"---------"+ person.country}}
+            </li>
+        </ul>
+    </div>
+
+    <hr/>
+
+    <div ng-controller="customersController">
+        {{peoples1}}
+    </div>
+
+    <script>
+        function customersController($scope,$http) {
+            $http.get("http://www.baiduc.com")
+                    .success(function(response) {$scope.peoples1 = response;});
+        }
+    </script>
+
+
+</body>
+
+</html>
