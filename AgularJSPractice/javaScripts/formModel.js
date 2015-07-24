@@ -1,24 +1,33 @@
 /**
  * Created by hehuiqi on 15/7/24.
  */
-var app =angular.module('MyApp2',[]);
-//自定义过滤器
-
-//app.controller = function($scope)
+//var app =angular.module('MyApp1', []);
+//
+//app.controller("formModel",function($scope)
 //{
 //    $scope.book =
 //    {
-//        name:"javaScript",
+//        bookName:"javaScript",
 //        price:20
 //    };
-//}
-app.filter('capitalize',function()
+//});
+////自定义过滤器
+//app.filter('capitalize',function()
+//{
+//    return function(input)
+//    {
+//        if(input)
+//        {
+//            return input[0].toUpperCase()+input.slice(1);
+//        }
+//    };
+//});
+
+function formModel($scope)
 {
-    return function(input)
+    $scope.book =
     {
-        if(input)
-        {
-            return input[0].toUpperCase()+input.slice(1);
-        }
+        bookName:"javaScript",
+        price:20
     };
-});
+}
