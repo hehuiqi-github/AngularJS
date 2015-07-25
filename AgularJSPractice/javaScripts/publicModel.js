@@ -74,3 +74,16 @@ app.controller("strInsert",function($scope,$interpolate){
         }
     });
 });
+
+//自定义过滤器
+
+app.filter('capitalize',function()
+{
+    return function(input)
+    {
+        if(input)
+        {
+            return input[0].toUpperCase()+input.slice(1);
+        }
+    };
+});
