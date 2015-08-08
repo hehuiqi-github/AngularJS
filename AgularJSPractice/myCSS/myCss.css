@@ -1,0 +1,24 @@
+/*第一种设置全屏图片*/
+html{
+    width:100%;
+    height:100%;
+}
+.bgDiv{
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+.bgImage{
+    height:100%;
+    width:100%;
+}
+
+/*第二种设置全屏图片*/
+/*body*/
+/*{*/
+    /*background-image:url('../Resource/bgImage.png');*/
+    /*/!*background-repeat:no-repeat;*!/*/
+    /*background-attachment:fixed*/
+/*}*/
+h1 {font-size: 40px;color: #28a4c9;}

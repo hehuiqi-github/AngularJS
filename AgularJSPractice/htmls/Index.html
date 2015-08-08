@@ -5,15 +5,21 @@
     <title>FirstApp</title>
     <script type="text/javascript" src="../vendor/angular/angularjs.js"> </script>
     <script type="text/javascript" src="../javaScripts/public.js"></script>
+
+    <style>
+        .cssinput{height:20px; width:100px;
+            left: 20px; right: 20px;}
+
+    </style>
 </head>
 <body ng-app>
     <div ng-controller="firstController">
-        <input type="text" ng-model="name" value="" placeholder="姓名"/>
+        <input type="text" ng-model="name" value="" placeholder="姓名1" class='cssinput'/>
         {{name}}
     </div>
     <hr>
 
-    <div ng-init="quantity=1;price=5">
+    <div ng-init="quantity=1;price=5" class="videoClass">
         数量:<input type="number" ng-model="quantity"/>
         价格:<input type="number" ng-model="price"/>
         <p>
